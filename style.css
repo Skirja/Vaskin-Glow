@@ -1,0 +1,706 @@
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+/* header */
+header {
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Position it at the top of the viewport */
+    z-index: 1000; /* Ensure it stays above other elements */
+    transition: box-shadow 0.3s; /* Add transition for box-shadow */
+}
+
+header.scrolled {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+
+
+header ul {
+    display: inherit;
+    list-style: none;
+}
+
+header ul a {
+    text-decoration: none;
+    margin: 87px;
+    color: #000000;
+}
+
+header ul a:hover {
+    color: #FCE995;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+header img {
+    width: 224px;
+    height: 46px;
+}
+
+/* main */
+/* carousel */
+#video-carousel {
+    position: relative;
+    width: 65%; /* Ubah lebar sesuai kebutuhan */
+    margin: 0 auto 23px;
+    overflow: hidden; /* Tambahkan overflow hidden untuk membatasi carousel pada area yang ditentukan */
+    margin-top: 10vh;
+}
+
+.carousel {
+    display: flex;
+    width: 300%; /* Lebih dari 100% untuk menampung semua slide */
+    transition: transform 0.5s ease; /* Animasi transisi saat berganti slide */
+}
+
+.slide {
+    flex: 0 0 33.333%; /* Mengatur lebar masing-masing slide sesuai dengan jumlah slide */
+}
+
+video {
+    width: 100%;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* online shop */
+.online-shop {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 81vw;
+    margin: 0 auto 23px;
+}
+
+.online-shop .teks h2 {
+    margin: 0;
+}
+
+/* tokopedia */
+.online-shop .tokopedia {
+    display: flex;
+    background-color: #FCE995;
+    width: 613px;
+    border-radius: 10px;
+}
+
+.tokopedia img {
+    width: 6vw;
+    padding: 15px;
+}
+
+.tokopedia .teks {
+    margin: 47px 47px 47px 0;
+}
+
+.tokopedia .teks h2 {
+    color: #000000;
+}
+
+.tokopedia .teks p {
+    color: #505050;
+}
+
+.tokopedia .teks a {
+    text-decoration: none;
+}
+
+.tokopedia .teks a:hover {
+    color: #000;
+    font-weight: 500;
+}
+
+/* shopee */
+.online-shop .shopee {
+    display: flex;
+    background-color: #1E1E1E;
+    width: 613px;
+    border-radius: 10px;
+}
+
+.shopee img {
+    width: 6vw;
+    padding: 16px;
+}
+
+.shopee .teks {
+    margin: 47px 47px 47px 0;
+}
+
+.shopee .teks h2 {
+    color: #fff;
+}
+
+.shopee .teks p {
+    color: #D0D0D0;
+}
+
+.shopee .teks a {
+    text-decoration: none;
+}
+
+.shopee .teks a:hover {
+    color: #FCE995;
+    font-weight: 500;
+}
+
+/* social media */
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 81vw;
+    margin: 0 auto 23px
+}
+
+.social-media .teks {
+    margin: 47px 47px 47px 0;
+}
+
+.social-media .teks h2, .social-media .teks p {
+    margin: 0;
+}
+
+/* youtube */
+.social-media .youtube {
+    display: flex;
+    background-color: #1E1E1E;
+    width: 613px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.youtube img {
+    height: 7vh;
+    padding: 16px 16px 16px 30px;
+}
+
+.youtube .teks {
+    color: #fff;
+}
+
+.youtube .teks p {
+    color: #D0D0D0;
+}
+
+.youtube .img {
+    flex-grow: 0;
+}
+
+.youtube .teks {
+    flex-grow: 1;
+}
+
+.youtube .link {
+    flex-grow: 0;
+    margin-right: 30px;
+}
+
+.youtube .link span {
+    text-decoration: none;
+    color: #551A8b;
+    cursor: pointer;
+}
+
+.youtube .link span:hover {
+    color: #FCE995;
+    font-weight: 500;
+}
+
+/* instagram */
+
+.social-media .instagram {
+    display: flex;
+    background-color: #FCE995;
+    width: 613px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.instagram img {
+    height: 7vh;
+    padding: 16px 30px 16px 30px;
+}
+
+.instagram .teks p {
+    color: #505050;
+}
+
+.instagram .img {
+    flex-grow: 0;
+}
+
+.instagram .teks {
+    flex-grow: 1;
+}
+
+.instagram .link {
+    flex-grow: 0;
+    margin-right: 30px;
+}
+
+.instagram .link span {
+    text-decoration: none;
+    color: #551A8b;
+    cursor: pointer;
+}
+
+.instagram .link span:hover {
+    color: #000000;
+    font-weight: 500;
+}
+
+/* produk */
+#produk {
+    background-color: #1E1E1E;
+    margin: 0 auto 23px;
+    width: 81vw;
+    border-radius: 10px;
+}
+
+.produk-container {
+    padding: 31px 61px;
+}
+
+.produk-container h1{
+    color: #fff;
+    font-size: 2rem;
+}
+
+.produk-container h3 {
+    color: #D0D0D0;
+    font-weight: normal;
+}
+
+/* carousel produk */
+.carousel-barang {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 57px;
+}
+
+.carousel-item {
+    display: flex;
+    overflow-x: hidden;
+    margin: auto;
+    width: 90%;
+    scroll-behavior: smooth;
+}
+
+.card {
+    width: 298px;
+    height: 414px;
+    margin-right: 20px;
+    background-color: #FCE995;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.card:last-child {
+    margin: 0;
+}
+
+
+.card-img-top {
+    width: 242px; /* Lebar gambar dalam card */
+    height: 242px; /* Tinggi gambar dalam card */
+    object-fit: cover; /* Pastikan gambar tetap proporsional */
+    margin-bottom: 10px; /* Beri sedikit ruang antara gambar dan teks */
+    padding: 0 11px;
+}
+
+.card-body {
+    margin: 0 28px;
+}
+
+.card-body a {
+    text-decoration: none;
+}
+
+.card-body a:hover {
+    color: #000000;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 10px;
+    color: #000;
+    background-color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+/* testimoni */
+.testimoni-container {
+    background-color: #1E1E1E;
+    margin: 0 auto 23px;
+    width: 81vw;
+    border-radius: 10px;
+
+}
+
+.testimoni-container h2 {
+    color: #FFDD55;
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding: 50px 0 19px;
+    margin: 0;
+    text-align: center;
+}
+
+.testimoni-container h3 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+}
+
+.testimoni-flex {
+    display: flex;
+    gap: 30px;
+    padding: 0 40px 40px 40px;
+    height: 380px;
+}
+
+.testimoni-card {
+    background-color: #FCE995;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+
+.testimoni-card.center-part {
+    align-self: flex-end;
+    background-color: #fff;
+}
+
+.testimoni-profil {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.testimoni-card img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.testimoni-content p {
+    color: #505050;
+    line-height: 1.5;
+}
+
+.nama-pengguna h4 {
+    margin: 10px 0 0;
+    color: #000;
+}
+
+.nama-pengguna p {
+    margin: 0;
+    color: #505050;
+    font-size: 0.9rem;
+}
+
+/* footer */
+footer {
+    background-color: #EFEFEF;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px; /* Tambahkan margin atas sesuai kebutuhan */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 20px;
+}
+
+.nav-links, .social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li, .social-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #505050;
+    padding: 0 50px;
+}
+
+.social-links img {
+    width: 24px; /* Sesuaikan ukuran ikon */
+    height: auto;
+    padding: 5px 30px;
+}
+
+.copyright {
+    color: #505050;
+    font-size: 14px;
+}
+
+
+/* CSS Untuk ukuran layar tablet (>= 768px dan < 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .social-media {
+        flex-wrap: wrap;
+    }
+
+    .youtube img {
+        height: 4vh;
+    }
+
+    .instagram img {
+        height: 5vh;
+    }
+
+    .testimoni-container h3 {
+        margin-bottom: 15px;
+    }
+
+    .testimoni-container {
+        height: 95vh;
+        overflow: auto;
+    }
+
+    .testimoni-flex {
+        flex-wrap: wrap;
+    }
+
+    .testimoni-card.center-part {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+}
+
+/* CSS Untuk ukuran layar handphone (< 768px) */
+@media only screen and (max-width: 767px) {
+    #video-carousel {
+        width: 80%;
+    }
+
+    .online-shop {
+        flex-wrap: wrap;
+    }
+
+    .social-media {
+        flex-wrap: wrap;
+    }
+
+    .social-media .youtube {
+        width: 100%;
+    }
+
+    .social-media .teks h2 {
+        font-size: 100%;
+    }
+
+    .youtube .link span {
+        display: none;
+    }
+    
+    .social-media .instagram {
+        width: 100%;
+    }
+
+    .instagram .link span {
+        display: none;
+    }
+
+    .produk-container {
+        padding: 31px 20px;
+    }
+
+    .testimoni-container h3 {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    .testimoni-container {
+        overflow: auto;
+    }
+
+    .testimoni-flex {
+        flex-wrap: wrap;
+        padding: 0 0 40px 0;
+        justify-content: center;
+    }
+
+    .testimoni-card {
+        height: auto;
+        width: 60vw;
+    }
+
+    .testimoni-card.center-part {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+
+    .testimoni-profil {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-links li, .social-links li {
+        margin: 0;
+    }
+
+    .social-links img {
+        padding: 5px 20px;
+    }
+
+}
+
+
+@media only screen and (min-width: 1025px) {
+    .ham {
+        display: none;
+    }
+    
+}
+
+.hamburger-menu {
+    display: none; /* Hide on larger screens initially */
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+    .hamburger-menu {
+        display: block; /* Show on smaller screens */
+    }
+
+    /* Style the icon bars here */
+    .hamburger-menu span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin: 5px 0;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    header ul {
+        display: none; /* Hide initially on mobile */
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 100; /* Ensure it's above other content */
+        margin: 0;
+    }
+
+    header ul.active {
+        display: block; /* Show when toggled */
+    }
+
+    header ul li {
+        display: block;
+        text-align: center;
+        margin: 15px 0;
+    }
+}
+
+/* ABOUT */
+
+.about-main {
+    height: 48vh;
+    margin-top: 15vh;
+}
+
+.about-main h1 {
+    text-align: center;
+}
+
+.about-main section {
+    background-color: #1E1E1E;
+    width: 81vw;
+    height: 25vh;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.about-main p {
+    color: #fff;
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 50px;
+}
+
+/* CSS Untuk ukuran layar tablet (>= 768px dan < 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .about-main p {
+        font-size: 1.2rem;
+        padding: 30px;
+    }
+}
+
+/* CSS Untuk ukuran layar handphone (< 768px) */
+@media only screen and (max-width: 767px) {
+    .about-main section {
+        height: 30vh;
+    }
+
+    .about-main p {
+        font-size: 1rem;
+        padding: 23px;
+    }
+
+}
